@@ -30,7 +30,20 @@
 		35F6B9DA27641B420090648F /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9D327641B420090648F /* ColorUtils.swift */; };
 		35F6B9DB27641B420090648F /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9D527641B420090648F /* Scheme.swift */; };
 		35F6B9DC27641B420090648F /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9D727641B420090648F /* Score.swift */; };
+		35F6B9FB27641D9D0090648F /* BlendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9FA27641D9D0090648F /* BlendTests.swift */; };
+		35F6B9FC27641D9D0090648F /* MaterialColorSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3544B0C5276176370095C27B /* MaterialColorSwift.framework */; };
+		35F6BA03276420E80090648F /* HctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6BA02276420E80090648F /* HctTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35F6B9FD27641D9D0090648F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3544B0A7276176110095C27B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3544B0C4276176370095C27B;
+			remoteInfo = MaterialColorSwift;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3544B0C5276176370095C27B /* MaterialColorSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialColorSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +71,9 @@
 		35F6B9D327641B420090648F /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		35F6B9D527641B420090648F /* Scheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
 		35F6B9D727641B420090648F /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		35F6B9F827641D9D0090648F /* MaterialColorSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaterialColorSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F6B9FA27641D9D0090648F /* BlendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendTests.swift; sourceTree = "<group>"; };
+		35F6BA02276420E80090648F /* HctTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HctTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35F6B9F527641D9D0090648F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35F6B9FC27641D9D0090648F /* MaterialColorSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +107,7 @@
 			children = (
 				3544B0D1276176440095C27B /* example */,
 				3544B0C6276176370095C27B /* MateriatColorSwift */,
+				35F6B9F927641D9D0090648F /* MaterialColorSwiftTests */,
 				3544B0B0276176110095C27B /* Products */,
 				35F6B9EE27641D5A0090648F /* Frameworks */,
 			);
@@ -93,6 +118,7 @@
 			children = (
 				3544B0C5276176370095C27B /* MaterialColorSwift.framework */,
 				3544B0D0276176440095C27B /* example.app */,
+				35F6B9F827641D9D0090648F /* MaterialColorSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +231,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		35F6B9F927641D9D0090648F /* MaterialColorSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				35F6B9FA27641D9D0090648F /* BlendTests.swift */,
+				35F6BA02276420E80090648F /* HctTests.swift */,
+			);
+			path = MaterialColorSwiftTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -254,6 +289,24 @@
 			productReference = 3544B0D0276176440095C27B /* example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		35F6B9F727641D9D0090648F /* MaterialColorSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35F6B9FF27641D9D0090648F /* Build configuration list for PBXNativeTarget "MaterialColorSwiftTests" */;
+			buildPhases = (
+				35F6B9F427641D9D0090648F /* Sources */,
+				35F6B9F527641D9D0090648F /* Frameworks */,
+				35F6B9F627641D9D0090648F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35F6B9FE27641D9D0090648F /* PBXTargetDependency */,
+			);
+			name = MaterialColorSwiftTests;
+			productName = MaterialColorSwiftTests;
+			productReference = 35F6B9F827641D9D0090648F /* MaterialColorSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,6 +321,9 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					3544B0CF276176440095C27B = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					35F6B9F727641D9D0090648F = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -287,6 +343,7 @@
 			targets = (
 				3544B0C4276176370095C27B /* MaterialColorSwift */,
 				3544B0CF276176440095C27B /* example */,
+				35F6B9F727641D9D0090648F /* MaterialColorSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +362,13 @@
 			files = (
 				3544B0DA276176460095C27B /* Preview Assets.xcassets in Resources */,
 				3544B0D7276176460095C27B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35F6B9F627641D9D0090648F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +409,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35F6B9F427641D9D0090648F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35F6B9FB27641D9D0090648F /* BlendTests.swift in Sources */,
+				35F6BA03276420E80090648F /* HctTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35F6B9FE27641D9D0090648F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3544B0C4276176370095C27B /* MaterialColorSwift */;
+			targetProxy = 35F6B9FD27641D9D0090648F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3544B0BB276176170095C27B /* Debug */ = {
@@ -582,6 +663,46 @@
 			};
 			name = Release;
 		};
+		35F6BA0027641D9D0090648F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.naodroid.MaterialColorSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35F6BA0127641D9D0090648F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.naodroid.MaterialColorSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +729,15 @@
 			buildConfigurations = (
 				3544B0DC276176460095C27B /* Debug */,
 				3544B0DD276176460095C27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35F6B9FF27641D9D0090648F /* Build configuration list for PBXNativeTarget "MaterialColorSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35F6BA0027641D9D0090648F /* Debug */,
+				35F6BA0127641D9D0090648F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
