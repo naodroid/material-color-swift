@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3544B0C4276176370095C27B"
                BuildableName = "material_color_swift.framework"
-               BlueprintName = "material-color-swift"
+               BlueprintName = "MaterialColorSwift"
                ReferencedContainer = "container:material_color_swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -52,7 +52,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3544B0C4276176370095C27B"
             BuildableName = "material_color_swift.framework"
-            BlueprintName = "material-color-swift"
+            BlueprintName = "MaterialColorSwift"
             ReferencedContainer = "container:material_color_swift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3544B0C5276176370095C27B /* material_color_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = material_color_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3544B0C5276176370095C27B /* MaterialColorSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialColorSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3544B0C7276176370095C27B /* material_color_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = material_color_swift.h; sourceTree = "<group>"; };
 		3544B0D0276176440095C27B /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3544B0D2276176440095C27B /* exampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleApp.swift; sourceTree = "<group>"; };
@@ -81,22 +81,23 @@
 		3544B0A6276176110095C27B = {
 			isa = PBXGroup;
 			children = (
-				3544B0C6276176370095C27B /* material-color-swift */,
 				3544B0D1276176440095C27B /* example */,
+				3544B0C6276176370095C27B /* MateriatColorSwift */,
 				3544B0B0276176110095C27B /* Products */,
+				35F6B9EE27641D5A0090648F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3544B0B0276176110095C27B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3544B0C5276176370095C27B /* material_color_swift.framework */,
+				3544B0C5276176370095C27B /* MaterialColorSwift.framework */,
 				3544B0D0276176440095C27B /* example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3544B0C6276176370095C27B /* material-color-swift */ = {
+		3544B0C6276176370095C27B /* MateriatColorSwift */ = {
 			isa = PBXGroup;
 			children = (
 				35F6B9C127641B110090648F /* blend */,
@@ -108,7 +109,7 @@
 				35F6B9D027641B420090648F /* utils */,
 				3544B0C7276176370095C27B /* material_color_swift.h */,
 			);
-			path = "material-color-swift";
+			path = MateriatColorSwift;
 			sourceTree = "<group>";
 		};
 		3544B0D1276176440095C27B /* example */ = {
@@ -197,6 +198,13 @@
 			path = score;
 			sourceTree = "<group>";
 		};
+		35F6B9EE27641D5A0090648F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -211,9 +219,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3544B0C4276176370095C27B /* material-color-swift */ = {
+		3544B0C4276176370095C27B /* MaterialColorSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3544B0C9276176370095C27B /* Build configuration list for PBXNativeTarget "material-color-swift" */;
+			buildConfigurationList = 3544B0C9276176370095C27B /* Build configuration list for PBXNativeTarget "MaterialColorSwift" */;
 			buildPhases = (
 				3544B0C0276176370095C27B /* Headers */,
 				3544B0C1276176370095C27B /* Sources */,
@@ -224,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = "material-color-swift";
+			name = MaterialColorSwift;
 			productName = "material-color-swift";
-			productReference = 3544B0C5276176370095C27B /* material_color_swift.framework */;
+			productReference = 3544B0C5276176370095C27B /* MaterialColorSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3544B0CF276176440095C27B /* example */ = {
@@ -277,7 +285,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3544B0C4276176370095C27B /* material-color-swift */,
+				3544B0C4276176370095C27B /* MaterialColorSwift */,
 				3544B0CF276176440095C27B /* example */,
 			);
 		};
@@ -586,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3544B0C9276176370095C27B /* Build configuration list for PBXNativeTarget "material-color-swift" */ = {
+		3544B0C9276176370095C27B /* Build configuration list for PBXNativeTarget "MaterialColorSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3544B0CA276176370095C27B /* Debug */,
