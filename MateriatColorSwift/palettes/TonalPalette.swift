@@ -68,6 +68,7 @@ class TonalPalette {
     ///
     /// Inverse of [TonalPalette.asList].
     static func fromList(colors: [Int]) -> TonalPalette {
+        assert(colors.count == commonSize);
         var cache: [Int: Int] = [:]
         TonalPalette.commonTones.enumerated().forEach { (index, toneValue) in
             cache[toneValue] = colors[index]

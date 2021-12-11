@@ -47,7 +47,7 @@ class CorePalette {
         return CorePalette(fromList: colors)
     }
     private init(fromList colors: [Int]) {
-        //assert(colors.count == size * TonalPalette.commonSize)
+        assert(colors.count == CorePalette.size * TonalPalette.commonSize)
         primary = TonalPalette.fromList(
             colors: _getPartition(colors, 0, TonalPalette.commonSize))
         secondary = TonalPalette.fromList(
@@ -113,5 +113,7 @@ extension CorePalette: CustomStringConvertible {
 private func _getPartition(_ list: [Int],
                            _ partitionNumber: Int,
                            _ partitionSize: Int) -> [Int] {
-    return Array(list[partitionSize..<(partitionNumber+partitionSize)])
+    let start = partitionNumber * partitionSize
+    let end = (partitionNumber + 1) * partitionSize
+    return Array(list[start..<end])
 }
