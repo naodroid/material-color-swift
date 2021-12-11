@@ -17,13 +17,13 @@ class ArgbAndScore {
         self.score = score
     }
 }
-
+/// The dart code implements this comparable as "Reverse Order of Score".
 extension ArgbAndScore: Comparable {
     static func == (lhs: ArgbAndScore, rhs: ArgbAndScore) -> Bool {
         lhs.score == rhs.score
     }
     static func < (lhs: ArgbAndScore, rhs: ArgbAndScore) -> Bool {
-        lhs.score < rhs.score
+        lhs.score > rhs.score
     }
 }
 
@@ -144,7 +144,7 @@ enum Score {
     private static func _filter(
         _ colorsToExcitedProportion: [Int: Double],
         _ colorsToCam: [Int: Cam16]
-    ) -> [Int ]{
+    ) -> [Int] {
         var filtered: [Int] = []
         for (color, cam) in colorsToCam {
             let proportion = colorsToExcitedProportion[color]!
