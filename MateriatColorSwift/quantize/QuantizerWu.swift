@@ -19,17 +19,17 @@ class QuantizerWu: Quantizer {
     // cube. The cube would be too large if it contained all 16 million colors:
     // historical best practice is to use 5 bits  of the 8 in each channel,
     // reducing the histogram to a volume of ~32,000.
-    static let indexBits = 5;
-    static let maxIndex = 32;
-    static let sideLength = 33;
-    static let totalSize = 35937;
+    static let indexBits = 5
+    static let maxIndex = 32
+    static let sideLength = 33
+    static let totalSize = 35937
     
-    init(weights: [Int],
-         momentsR: [Int],
-         momentsG: [Int],
-         momentsB: [Int],
-         moments: [Double],
-         cubes: [Box]
+    init(weights: [Int] = [],
+         momentsR: [Int] = [],
+         momentsG: [Int] = [],
+         momentsB: [Int] = [],
+         moments: [Double] = [],
+         cubes: [Box] = []
     ) {
         self.weights = weights
         self.momentsR = momentsR
@@ -63,11 +63,11 @@ class QuantizerWu: Quantizer {
     }
     
     func constructHistogram(pixels: [Int: Int]) {
-        weights = []
-        momentsR = []
-        momentsG = []
-        momentsB = []
-        moments = []
+        weights = Array(repeating: 0, count: QuantizerWu.totalSize)
+        momentsR = Array(repeating: 0, count: QuantizerWu.totalSize)
+        momentsG = Array(repeating: 0, count: QuantizerWu.totalSize)
+        momentsB = Array(repeating: 0, count: QuantizerWu.totalSize)
+        moments = Array(repeating: 0, count: QuantizerWu.totalSize)
         for (pixel, count) in pixels {
             let red = ColorUtils.redFrom(argb: pixel)
             let green = ColorUtils.greenFrom(argb: pixel)
@@ -87,11 +87,11 @@ class QuantizerWu: Quantizer {
     
     func computeMoments() {
         for r in 1..<QuantizerWu.sideLength {
-            var area: [Int] = []
-            var areaR: [Int] = []
-            var areaG: [Int] = []
-            var areaB: [Int] = []
-            var area2: [Double] = []
+            var area: [Int] = Array(repeating: 0, count: QuantizerWu.sideLength)
+            var areaR: [Int] = Array(repeating: 0, count: QuantizerWu.sideLength)
+            var areaG: [Int] = Array(repeating: 0, count: QuantizerWu.sideLength)
+            var areaB: [Int] = Array(repeating: 0, count: QuantizerWu.sideLength)
+            var area2: [Double] = Array(repeating: 0.0, count: QuantizerWu.sideLength)
             for g in 1..<QuantizerWu.sideLength {
                 var line = 0
                 var lineR = 0

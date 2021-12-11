@@ -18,6 +18,9 @@
 		3544B10427617E3B0095C27B /* QuantizerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544B10327617E3B0095C27B /* QuantizerMap.swift */; };
 		3544B1062762C76B0095C27B /* QuantizerCelebi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544B1052762C76B0095C27B /* QuantizerCelebi.swift */; };
 		3544B1082762C7800095C27B /* QuantizerWu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544B1072762C7800095C27B /* QuantizerWu.swift */; };
+		357BE380276543A8003F2C1F /* QuantizerCelebiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BE37F276543A8003F2C1F /* QuantizerCelebiTests.swift */; };
+		357BE382276547DA003F2C1F /* QuantizerWuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BE381276547DA003F2C1F /* QuantizerWuTests.swift */; };
+		357BE38427654B77003F2C1F /* QuantizerWsmeansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BE38327654B77003F2C1F /* QuantizerWsmeansTests.swift */; };
 		35F6B9C027640C3F0090648F /* QuantizerWsmeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9BF27640C3F0090648F /* QuantizerWsmeans.swift */; };
 		35F6B9C327641B110090648F /* Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9C227641B110090648F /* Blend.swift */; };
 		35F6B9C827641B210090648F /* Cam16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9C527641B210090648F /* Cam16.swift */; };
@@ -60,6 +63,9 @@
 		3544B10327617E3B0095C27B /* QuantizerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerMap.swift; sourceTree = "<group>"; };
 		3544B1052762C76B0095C27B /* QuantizerCelebi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerCelebi.swift; sourceTree = "<group>"; };
 		3544B1072762C7800095C27B /* QuantizerWu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerWu.swift; sourceTree = "<group>"; };
+		357BE37F276543A8003F2C1F /* QuantizerCelebiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerCelebiTests.swift; sourceTree = "<group>"; };
+		357BE381276547DA003F2C1F /* QuantizerWuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerWuTests.swift; sourceTree = "<group>"; };
+		357BE38327654B77003F2C1F /* QuantizerWsmeansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerWsmeansTests.swift; sourceTree = "<group>"; };
 		35F6B9BF27640C3F0090648F /* QuantizerWsmeans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerWsmeans.swift; sourceTree = "<group>"; };
 		35F6B9C227641B110090648F /* Blend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blend.swift; sourceTree = "<group>"; };
 		35F6B9C527641B210090648F /* Cam16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cam16.swift; sourceTree = "<group>"; };
@@ -239,6 +245,9 @@
 				35F6B9FA27641D9D0090648F /* BlendTests.swift */,
 				35F6BA02276420E80090648F /* HctTests.swift */,
 				35F6BA04276424B60090648F /* PaletteTests.swift */,
+				357BE37F276543A8003F2C1F /* QuantizerCelebiTests.swift */,
+				357BE381276547DA003F2C1F /* QuantizerWuTests.swift */,
+				357BE38327654B77003F2C1F /* QuantizerWsmeansTests.swift */,
 			);
 			path = MaterialColorSwiftTests;
 			sourceTree = "<group>";
@@ -417,8 +426,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F6B9FB27641D9D0090648F /* BlendTests.swift in Sources */,
+				357BE382276547DA003F2C1F /* QuantizerWuTests.swift in Sources */,
 				35F6BA03276420E80090648F /* HctTests.swift in Sources */,
 				35F6BA05276424B60090648F /* PaletteTests.swift in Sources */,
+				357BE38427654B77003F2C1F /* QuantizerWsmeansTests.swift in Sources */,
+				357BE380276543A8003F2C1F /* QuantizerCelebiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
