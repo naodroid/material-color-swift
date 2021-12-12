@@ -12,20 +12,20 @@ import Foundation
 /// An intermediate concept between the key color for a UI theme, and a full
 /// color scheme. 5 tonal palettes are generated, all except one use the same
 /// hue as the key color, and all vary in chroma.
-class CorePalette {
+public class CorePalette {
     /// The number of generated tonal palettes.
-    static let size = 5
+    public static let size = 5
     
-    let primary: TonalPalette
-    let secondary: TonalPalette
-    let tertiary: TonalPalette
-    let neutral: TonalPalette
-    let neutralVariant: TonalPalette
-    let error = TonalPalette.of(hue: 25, chroma: 84);
+    public let primary: TonalPalette
+    public let secondary: TonalPalette
+    public let tertiary: TonalPalette
+    public let neutral: TonalPalette
+    public let neutralVariant: TonalPalette
+    public let error = TonalPalette.of(hue: 25, chroma: 84);
     
     
     /// Create a [CorePalette] from a source ARGB color.
-    static func of(argb: Int) -> CorePalette {
+    public static func of(argb: Int) -> CorePalette {
         let cam = Cam16.fromInt(argb: argb)
         return CorePalette(hue: cam.hue, chroma: cam.chroma)
     }
@@ -73,7 +73,7 @@ class CorePalette {
     }
 }
 extension CorePalette: Equatable {
-    static func ==(lhs: CorePalette, rhs: CorePalette) -> Bool {
+    public static func ==(lhs: CorePalette, rhs: CorePalette) -> Bool {
         return lhs.primary == rhs.primary
         && lhs.secondary == rhs.secondary
         && lhs.tertiary == rhs.tertiary
@@ -83,7 +83,7 @@ extension CorePalette: Equatable {
     }
 }
 extension CorePalette: Hashable {
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(primary)
         hasher.combine(secondary)
         hasher.combine(tertiary)
@@ -93,7 +93,7 @@ extension CorePalette: Hashable {
     }
 }
 extension CorePalette: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return "primary: \(primary)\n"
         + "secondary: \(secondary)\n"
         + "tertiary: \(tertiary)\n"

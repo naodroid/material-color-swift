@@ -8,10 +8,10 @@
 import Foundation
 
 /// Functions for blending in HCT and CAM16.
-class Blend {
+public class Blend {
     /// Shifts [designColor]'s hue towards [sourceColor]'s, creating a slightly
     /// warmer/coolor variant of [designColor]. Hue will shift up to 15 degrees.
-    static func harmonize(designColor: Int, sourceColor: Int) -> Int {
+    public static func harmonize(designColor: Int, sourceColor: Int) -> Int {
         let fromHct = HctColor.fromInt(argb: designColor);
         let toHct = HctColor.fromInt(argb: sourceColor)
         let differenceDegrees = MathUtils
@@ -30,7 +30,7 @@ class Blend {
     }
     
     /// Blends [from]'s hue in HCT toward's [to]'s hue.
-    static func hctHue(from: Int, to: Int, amount: Double) -> Int {
+    public static func hctHue(from: Int, to: Int, amount: Double) -> Int {
         let ucs = Blend.cam16ucs(from: from, to: to, amount: amount)
         let ucsCam = Cam16.fromInt(argb: ucs)
         let fromCam = Cam16.fromInt(argb: from)
@@ -41,7 +41,7 @@ class Blend {
     }
     
     /// Blend [from] and [to] in the CAM16-UCS color space.
-    static func cam16ucs(from: Int, to: Int, amount: Double) -> Int {
+    public static func cam16ucs(from: Int, to: Int, amount: Double) -> Int {
         let fromCam = Cam16.fromInt(argb: from)
         let toCam = Cam16.fromInt(argb: to)
         

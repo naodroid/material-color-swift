@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PointProvider {
+public protocol PointProvider {
     func fromInt(argb: Int) -> [Double]
     func toInt(lab: [Double]) -> Int
     func distance(_ a: [Double], _ b: [Double]) -> Double

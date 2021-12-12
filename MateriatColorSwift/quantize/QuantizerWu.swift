@@ -7,7 +7,7 @@
 
 import Foundation
 
-class QuantizerWu: Quantizer {
+public class QuantizerWu: Quantizer {
     var weights :[Int] = []
     var momentsR: [Int] = []
     var momentsG: [Int] = []
@@ -40,7 +40,7 @@ class QuantizerWu: Quantizer {
     }
     
     
-    func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult {
+    public func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult {
         let result = await QuantizerMap().quantize(pixels: pixels, maxColors: maxColors)
         constructHistogram(pixels: result.colorToCount)
         computeMoments()

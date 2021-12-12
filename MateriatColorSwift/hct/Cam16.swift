@@ -89,7 +89,7 @@ public struct Cam16 {
     
     /// Convert [argb] to CAM16, assuming the color was viewed in default viewing
     /// conditions.
-    static func fromInt(argb: Int) -> Cam16 {
+    public static func fromInt(argb: Int) -> Cam16 {
         return fromIntInViewingConditions(argb: argb,
                                           viewingConditions: ViewingConditions.sRgb);
     }
@@ -228,7 +228,7 @@ public struct Cam16 {
     
     /// Create a CAM16 color from CAM16-UCS coordinates [jstar], [astar], [bstar].
     /// assuming the color was viewed in default viewing conditions.
-    static func fromUcs(jstar: Double, astar: Double, bstar: Double) -> Cam16 {
+    public static func fromUcs(jstar: Double, astar: Double, bstar: Double) -> Cam16 {
         return fromUcsInViewingConditions(
             jstar: jstar,
             astar: astar,
@@ -238,7 +238,7 @@ public struct Cam16 {
     
     /// Create a CAM16 color from CAM16-UCS coordinates [jstar], [astar], [bstar].
     /// in [viewingConditions].
-    static func fromUcsInViewingConditions(jstar: Double, astar: Double,
+    public static func fromUcsInViewingConditions(jstar: Double, astar: Double,
                                            bstar: Double,viewingConditions: ViewingConditions) -> Cam16 {
         let a = astar
         let b = bstar

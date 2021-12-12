@@ -7,18 +7,18 @@
 
 import Foundation
 
-class PointProviderLab {
-    init() {
+public class PointProviderLab {
+    public init() {
     }
 }
 extension PointProviderLab: PointProvider {
-    func fromInt(argb: Int) -> [Double] {
+    public func fromInt(argb: Int) -> [Double] {
         return ColorUtils.labFrom(argb: argb)
     }
-    func toInt(lab: [Double]) -> Int {
+    public func toInt(lab: [Double]) -> Int {
         return ColorUtils.argbFrom(l: lab[0], a: lab[1], b: lab[2])
     }
-    func distance(_ one: [Double], _ two: [Double]) -> Double {
+    public func distance(_ one: [Double], _ two: [Double]) -> Double {
         let dL = (one[0] - two[0])
         let dA = (one[1] - two[1])
         let dB = (one[2] - two[2])

@@ -7,8 +7,8 @@
 
 import Foundation
 
-class QuantizerMap: Quantizer {
-    func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult {
+public class QuantizerMap: Quantizer {
+    public func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult {
         var countByColor: [Int: Int] = [:]
         for pixel in pixels {
             let alpha = ColorUtils.alphaFrom(argb: pixel)

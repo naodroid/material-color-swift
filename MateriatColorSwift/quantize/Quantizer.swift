@@ -6,12 +6,12 @@
 //
 
 import Foundation
-protocol Quantizer {
+public protocol Quantizer {
     func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult
 }
 
-class QuantizerResult {
-    var colorToCount: [Int: Int]
+public class QuantizerResult {
+    public var colorToCount: [Int: Int]
     var inputPixelToClusterPixel: [Int: Int]
     
     init(colorToCount: [Int: Int],

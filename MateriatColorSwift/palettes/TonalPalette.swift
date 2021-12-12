@@ -16,7 +16,7 @@ import Foundation
 /// representing ARBG colors. Correctness (constant hue and chroma) of the input
 /// is not enforced. [get] will only return the input colors, corresponding to
 /// [commonTones].
-class TonalPalette {
+public class TonalPalette {
     /// Commonly-used tone values.
     static let commonTones: [Int] = [
         0,
@@ -60,9 +60,10 @@ class TonalPalette {
     }
     
     /// Create colors using [hue] and [chroma].
-    static func of(hue: Double, chroma: Double) -> TonalPalette {
+    public static func of(hue: Double, chroma: Double) -> TonalPalette {
         return TonalPalette._from(hue: hue, chroma: chroma)
     }
+    
     
     /// Create colors from a fixed-size list of ARGB color ints.
     ///
@@ -90,7 +91,7 @@ class TonalPalette {
     /// color with corresponding [tone].
     /// If the class was instantiated from a fixed-size list of color ints, [tone]
     /// must be in [commonTones].
-    func getTone(_ tone: Int) -> Int {
+    public func getTone(_ tone: Int) -> Int {
         if let hue = _hue, let chroma = _chroma {
             let ch = (tone >= 90) ? min(chroma, 40.0) : chroma
             if let tone = _cache[tone] {
@@ -111,7 +112,7 @@ class TonalPalette {
     }
 }
 extension TonalPalette: Equatable {
-    static func ==(lhs: TonalPalette, rhs: TonalPalette) -> Bool {
+    public static func ==(lhs: TonalPalette, rhs: TonalPalette) -> Bool {
         if lhs._hue != nil && lhs._chroma != nil {
             return lhs._hue == rhs._hue && lhs._chroma == rhs._chroma;
         } else {
@@ -120,15 +121,14 @@ extension TonalPalette: Equatable {
     }
 }
 extension TonalPalette: Hashable {
-    
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(_hue)
         hasher.combine(_chroma)
         hasher.combine(_cache)
     }
 }
 extension TonalPalette: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         if let hue = _hue, let chroma = _chroma {
             return "TonalPalette.of(\(hue), \(chroma))"
         } else {

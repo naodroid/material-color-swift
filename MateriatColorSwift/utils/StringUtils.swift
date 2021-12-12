@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum StringUtils {
-    static func hexFrom(argb: Int, leadingHashSign: Bool = true) -> String {
+public enum StringUtils {
+    public static func hexFrom(argb: Int, leadingHashSign: Bool = true) -> String {
         let red = ColorUtils.redFrom(argb: argb)
         let green = ColorUtils.greenFrom(argb: argb)
         let blue = ColorUtils.blueFrom(argb: argb)
@@ -18,7 +18,7 @@ enum StringUtils {
         return signText + rgbText
     }
     
-    static func argbFrom(hex: String) -> Int? {
+    public static func argbFrom(hex: String) -> Int? {
         return Int(hex, radix: 16)
     }
 }

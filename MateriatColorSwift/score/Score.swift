@@ -33,7 +33,7 @@ extension ArgbAndScore: Comparable {
 /// Enables use of a high cluster count for image quantization, thus ensuring
 /// colors aren't muddied, while curating the high cluster count to a much
 ///  smaller number of appropriate choices.
-enum Score {
+public enum Score {
     private static let _targetChroma = 48.0
     private static let _weightProportion = 0.7
     private static let _weightChromaAbove = 0.3
@@ -53,7 +53,7 @@ enum Score {
     /// will always be at least one color returned. If all the input colors were
     /// not suitable for a theme, a default fallback color will be provided,
     /// Google Blue.
-    static func score(colorsToPopulation: [Int: Int]) -> [Int] {
+    public static func score(colorsToPopulation: [Int: Int]) -> [Int] {
         var populationSum = 0.0;
         for population in colorsToPopulation.values {
             populationSum += Double(population)

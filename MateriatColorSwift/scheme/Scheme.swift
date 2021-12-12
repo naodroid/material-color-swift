@@ -7,36 +7,36 @@
 
 import Foundation
 
-struct Scheme {
-    let primary: Int
-    let onPrimary: Int
-    let primaryContainer: Int
-    let onPrimaryContainer: Int
-    let secondary: Int
-    let onSecondary: Int
-    let secondaryContainer: Int
-    let onSecondaryContainer: Int
-    let tertiary: Int
-    let onTertiary: Int
-    let tertiaryContainer: Int
-    let onTertiaryContainer: Int
-    let error: Int
-    let onError: Int
-    let errorContainer: Int
-    let onErrorContainer: Int
-    let background: Int
-    let onBackground: Int
-    let surface: Int
-    let onSurface: Int
-    let surfaceVariant: Int
-    let onSurfaceVariant: Int
-    let outline: Int
-    let shadow: Int
-    let inverseSurface: Int
-    let inverseOnSurface: Int
-    let inversePrimary: Int
+public struct Scheme {
+    public let primary: Int
+    public let onPrimary: Int
+    public let primaryContainer: Int
+    public let onPrimaryContainer: Int
+    public let secondary: Int
+    public let onSecondary: Int
+    public let secondaryContainer: Int
+    public let onSecondaryContainer: Int
+    public let tertiary: Int
+    public let onTertiary: Int
+    public let tertiaryContainer: Int
+    public let onTertiaryContainer: Int
+    public let error: Int
+    public let onError: Int
+    public let errorContainer: Int
+    public let onErrorContainer: Int
+    public let background: Int
+    public let onBackground: Int
+    public let surface: Int
+    public let onSurface: Int
+    public let surfaceVariant: Int
+    public let onSurfaceVariant: Int
+    public let outline: Int
+    public let shadow: Int
+    public let inverseSurface: Int
+    public let inverseOnSurface: Int
+    public let inversePrimary: Int
     
-    static func light(color: Int) -> Scheme {
+    public static func light(color: Int) -> Scheme {
         let core = CorePalette.of(argb: color)
         return Scheme(
             primary: core.primary.getTone(40),
@@ -69,7 +69,7 @@ struct Scheme {
         )
     }
     
-    static func dark(color: Int) -> Scheme {
+    public static func dark(color: Int) -> Scheme {
         let core = CorePalette.of(argb: color)
         return Scheme(
             primary: core.primary.getTone(80),

@@ -29,11 +29,11 @@ extension DistanceAndIndex: Comparable {
     }
 }
 
-class QuantizerWsmeans {
+public class QuantizerWsmeans {
     static let maxIterations = 10
     static let minMovementDistance = 3.0
     
-    static func quantize(
+    public static func quantize(
         inputPixels: [Int],
         maxColors: Int,
         startingClusters: [Int] = [],

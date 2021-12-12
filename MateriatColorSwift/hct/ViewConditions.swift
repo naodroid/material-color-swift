@@ -18,27 +18,27 @@ import Foundation
 ///
 /// This class caches intermediate values of the CAM16 conversion process that
 /// depend only on viewing conditions, enabling speed ups.
-struct ViewingConditions {
+public struct ViewingConditions {
     static let standard = sRgb
     static let sRgb = ViewingConditions.make()
     
-    let whitePoint: [Double]
-    let adaptingLuminance: Double
-    let backgroundLstar: Double
-    let surround: Double
-    let discountingIlluminant: Bool
+    public let whitePoint: [Double]
+    public let adaptingLuminance: Double
+    public let backgroundLstar: Double
+    public let surround: Double
+    public let discountingIlluminant: Bool
     
-    let backgroundYTowhitePointY: Double
-    let aw: Double
-    let nbb: Double
-    let ncb: Double
-    let c: Double
-    let nC: Double
-    let drgbInverse: [Double]
-    let rgbD: [Double]
-    let fl: Double
-    let fLRoot: Double
-    let z: Double
+    public let backgroundYTowhitePointY: Double
+    public let aw: Double
+    public let nbb: Double
+    public let ncb: Double
+    public let c: Double
+    public let nC: Double
+    public let drgbInverse: [Double]
+    public let rgbD: [Double]
+    public let fl: Double
+    public let fLRoot: Double
+    public let z: Double
     
     
     static func make(
