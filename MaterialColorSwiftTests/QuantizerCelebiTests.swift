@@ -25,38 +25,38 @@ class QuantizerCelebiTests: XCTestCase {
     }
     func test1R() async {
         let celebi = QuantizerCelebi()
-        let result = await celebi.quantize(pixels: [red], maxColors: maxColors)
+        let result = celebi.quantize(pixels: [red], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], red)
     }
-    func test1G() async {
+    func test1G() {
         let celebi = QuantizerCelebi()
-        let result = await celebi.quantize(pixels: [green], maxColors: maxColors)
+        let result = celebi.quantize(pixels: [green], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], green)
     }
-    func test1B() async{
+    func test1B() {
         let celebi = QuantizerCelebi()
-        let result = await celebi.quantize(pixels: [blue], maxColors: maxColors)
+        let result = celebi.quantize(pixels: [blue], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], blue)
     }
     
-    func test5B() async {
-        let celebi = QuantizerCelebi();
-        let result =
-        await celebi.quantize(pixels: [blue, blue, blue, blue, blue], maxColors: maxColors);
+    func test5B() {
+        let celebi = QuantizerCelebi()
+        let result = celebi.quantize(pixels: [blue, blue, blue, blue, blue],
+                                     maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], blue)
     }
     
-    func test1R1G1B() async {
+    func test1R1G1B() {
         let celebi = QuantizerCelebi()
-        let result = await celebi.quantize(pixels: [red, green, blue],
+        let result = celebi.quantize(pixels: [red, green, blue],
                                            maxColors: maxColors)
         let colors = Array(result.colorToCount.keys).sorted()
         
@@ -66,11 +66,10 @@ class QuantizerCelebiTests: XCTestCase {
         XCTAssertEqual(colors[2], red)
     }
     
-    func test2R3G() async {
+    func test2R3G() {
         let celebi = QuantizerCelebi()
-        let result =
-        await celebi.quantize(pixels: [red, red, green, green, green],
-                              maxColors: maxColors)
+        let result = celebi.quantize(pixels: [red, red, green, green, green],
+                                     maxColors: maxColors)
         let colors = Array(result.colorToCount.keys).sorted()
         XCTAssertEqual(colors.count, 2)
         

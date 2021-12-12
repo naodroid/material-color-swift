@@ -7,7 +7,7 @@
 
 import Foundation
 public protocol Quantizer {
-    func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult
+    func quantize(pixels: [Int], maxColors: Int) -> QuantizerResult
 }
 
 public class QuantizerResult {

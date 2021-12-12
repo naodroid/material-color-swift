@@ -40,8 +40,8 @@ public class QuantizerWu: Quantizer {
     }
     
     
-    public func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult {
-        let result = await QuantizerMap().quantize(pixels: pixels, maxColors: maxColors)
+    public func quantize(pixels: [Int], maxColors: Int) -> QuantizerResult {
+        let result = QuantizerMap().quantize(pixels: pixels, maxColors: maxColors)
         constructHistogram(pixels: result.colorToCount)
         computeMoments()
         let createBoxesResult = createBoxes(maxColorCount: maxColors)

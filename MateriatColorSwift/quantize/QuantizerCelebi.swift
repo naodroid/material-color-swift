@@ -9,9 +9,9 @@ import Foundation
 
 
 public class QuantizerCelebi: Quantizer {
-    public func quantize(pixels: [Int], maxColors: Int) async -> QuantizerResult {
+    public func quantize(pixels: [Int], maxColors: Int) -> QuantizerResult {
         let wu = QuantizerWu()
-        let wuResult = await wu.quantize(pixels: pixels, maxColors: maxColors)
+        let wuResult = wu.quantize(pixels: pixels, maxColors: maxColors)
         let clusters: [Int] = Array(wuResult.colorToCount.keys)
         let wsmeansResult = QuantizerWsmeans.quantize(
             inputPixels: pixels,

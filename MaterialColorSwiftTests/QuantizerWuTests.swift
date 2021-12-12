@@ -24,65 +24,64 @@ class QuantizerWuTests: XCTestCase {
     override func tearDownWithError() throws {
     }
     
-    func test1R() async {
+    func test1R() {
         let wu = QuantizerWu()
-        let result = await wu.quantize(pixels: [red], maxColors: maxColors)
+        let result = wu.quantize(pixels: [red], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
     }
-    func test1Rando() async {
+    func test1Rando() {
         let wu = QuantizerWu()
-        let result = await wu.quantize(pixels: [0xff141216], maxColors: maxColors);
+        let result = wu.quantize(pixels: [0xff141216], maxColors: maxColors);
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], 0xff141216)
     }
-    func test1R_2() async {
+    func test1R_2() {
         let wu = QuantizerWu()
-        let result = await wu.quantize(pixels: [red], maxColors: maxColors);
+        let result = wu.quantize(pixels: [red], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], red)
     }
-    func test1G() async {
+    func test1G() {
         let wu = QuantizerWu()
-        let result = await wu.quantize(pixels: [green], maxColors: maxColors);
+        let result = wu.quantize(pixels: [green], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], green)
     }
-    func test1B() async {
+    func test1B() {
         let wu = QuantizerWu()
-        let result = await wu.quantize(pixels: [blue], maxColors: maxColors);
+        let result = wu.quantize(pixels: [blue], maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], blue)
     }
     
-    func test5B() async {
+    func test5B() {
         let wu = QuantizerWu();
-        let result =
-        await wu.quantize(pixels: [blue, blue, blue, blue, blue], maxColors: maxColors);
+        let result = wu.quantize(pixels: [blue, blue, blue, blue, blue],
+                                 maxColors: maxColors)
         let colors = Array(result.colorToCount.keys)
         XCTAssertEqual(colors.count, 1)
         XCTAssertEqual(colors[0], blue)
     }
     
-    func test2R3G() async {
-        let wu = QuantizerWu();
-        let result =
-        await wu.quantize(pixels: [red, red, green, green, green],
-                          maxColors: maxColors);
+    func test2R3G() {
+        let wu = QuantizerWu()
+        let result = wu.quantize(pixels: [red, red, green, green, green],
+                                 maxColors: maxColors)
         let colors = Array(result.colorToCount.keys).sorted()
         XCTAssertEqual(colors.count, 2)
         XCTAssertEqual(colors[0], green)
         XCTAssertEqual(colors[1], red)
     }
     
-    func test1R1G1B() async {
+    func test1R1G1B() {
         let wu = QuantizerWu()
-        let result = await wu.quantize(pixels: [red, green, blue],
-                                       maxColors: maxColors);
+        let result = wu.quantize(pixels: [red, green, blue],
+                                 maxColors: maxColors)
         let colors = Array(result.colorToCount.keys).sorted()
         XCTAssertEqual(colors.count, 3)
         XCTAssertEqual(colors[0], blue)
