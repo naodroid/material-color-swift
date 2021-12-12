@@ -34,7 +34,7 @@ public class TonalPalette {
         100
     ]
     
-    static let commonSize = commonTones.count
+    public static let commonSize = commonTones.count
     
     private let _hue: Double?
     private let _chroma: Double?
@@ -68,7 +68,7 @@ public class TonalPalette {
     /// Create colors from a fixed-size list of ARGB color ints.
     ///
     /// Inverse of [TonalPalette.asList].
-    static func fromList(colors: [Int]) -> TonalPalette {
+    public static func fromList(colors: [Int]) -> TonalPalette {
         assert(colors.count == commonSize);
         var cache: [Int: Int] = [:]
         TonalPalette.commonTones.enumerated().forEach { (index, toneValue) in

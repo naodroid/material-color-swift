@@ -43,7 +43,7 @@ public class CorePalette {
     /// representing concatenated tonal palettes.
     ///
     /// Inverse of [asList].
-    static func fromList(_ colors: [Int]) -> CorePalette {
+    public static func fromList(_ colors: [Int]) -> CorePalette {
         return CorePalette(fromList: colors)
     }
     private init(fromList colors: [Int]) {
@@ -64,7 +64,7 @@ public class CorePalette {
     /// Returns a list of ARGB color [int]s from concatenated tonal palettes.
     ///
     /// Inverse of [CorePalette.fromList].
-    func asList() -> [Int] {
+    public func asList() -> [Int] {
         primary.asList
         + secondary.asList
         + tertiary.asList

@@ -14,22 +14,22 @@ import Foundation
 public enum ColorUtils {
     /// Convert a color from RGB components to ARGB format.
     public static func argbFrom(red: Int, green: Int, blue: Int) -> Int {
-        return 255 << 24 | (red & 255) << 16 | (green & 255) << 8 | blue & 255
+        return (255 << 24) | ((red & 255) << 16) | ((green & 255) << 8) | (blue & 255)
     }
     
     /// The alpha component of a color in ARGB format.
     public static func alphaFrom(argb: Int) -> Int {
-        return argb >> 24 & 255
+        return (argb >> 24) & 255
     }
     
     /// The red component of a color in ARGB format.
     public static func redFrom(argb: Int) -> Int {
-        return argb >> 16 & 255
+        return (argb >> 16) & 255
     }
     
     /// The green component of a color in ARGB format.
     public static func greenFrom(argb: Int) -> Int {
-        return argb >> 8 & 255
+        return (argb >> 8) & 255
     }
     
     /// The blue component of a color in ARGB format.
