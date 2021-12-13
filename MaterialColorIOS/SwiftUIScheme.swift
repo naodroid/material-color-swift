@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import MaterialColorSwift
 
-public struct SwiftUIScheme {
+public struct SwiftUIScheme: Equatable {
     public let primary: Color
     public let onPrimary: Color
     public let primaryContainer: Color
@@ -76,10 +76,10 @@ public struct SwiftUIScheme {
         let g = (argb >> 8) & 0xFF
         let b = (argb) & 0xFF
         
-        let da = CGFloat(a)
-        let dr = CGFloat(r)
-        let dg = CGFloat(g)
-        let db = CGFloat(b)
+        let da = CGFloat(a) / CGFloat(255)
+        let dr = CGFloat(r) / CGFloat(255)
+        let dg = CGFloat(g) / CGFloat(255)
+        let db = CGFloat(b) / CGFloat(255)
         
         return Color(red: dr, green: dg, blue: db).opacity(da)
     }

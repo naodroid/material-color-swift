@@ -24,13 +24,10 @@ public class MaterialColorConverter {
             maxColors: size
         ).colorToCount
         let colors = Array(colorToCount.keys)
-        for (c, k) in colorToCount {
-            print(String(format: "%02X %d", c, k))
-        }
-        return isDarkTheme ? Scheme.light(color: colors[0]) : Scheme.dark(color: colors[0])
+        return isDarkTheme ? Scheme.dark(color: colors[0]) : Scheme.light(color: colors[0])
     }
     /// convert uiimage to argb pixel array in specified size (width, height=size)
-    public static func imageToPixels(_ uiImage: UIImage, size: Int = 16) -> [Int]? {
+    public static func imageToPixels(_ uiImage: UIImage, size: Int = 64) -> [Int]? {
         guard let cgImage = uiImage.cgImage else {
             return nil
         }
@@ -64,7 +61,6 @@ public class MaterialColorConverter {
         context.draw(cgImage, in: CGRect(x: 0, y: 0, width: outputWidth, height: outputHeight))
         // int32 to int
         let result: [Int] = pixels.map {
-            print(String(format: "%02X", $0))
             return Int($0)
         }
         return result

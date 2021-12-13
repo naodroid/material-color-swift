@@ -75,10 +75,10 @@ public struct UIKitScheme {
         let g = (argb >> 8) & 0xFF
         let b = (argb) & 0xFF
         
-        let da = CGFloat(a)
-        let dr = CGFloat(r)
-        let dg = CGFloat(g)
-        let db = CGFloat(b)
+        let da = CGFloat(a) / CGFloat(255)
+        let dr = CGFloat(r) / CGFloat(255)
+        let dg = CGFloat(g) / CGFloat(255)
+        let db = CGFloat(b) / CGFloat(255)
         
         return UIColor(red: dr, green: dg, blue: db, alpha: da)
     }
