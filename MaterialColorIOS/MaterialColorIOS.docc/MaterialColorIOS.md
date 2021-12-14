@@ -1,13 +1,24 @@
 # ``MaterialColorIOS``
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
 
-## Overview
+a support library for `MaterialColorSwift` in UIKit/SwiftUI.
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
 
-## Topics
+## How to use
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
 
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
+### 1. Generate Scheme from Image
+
+```swift
+let image = UIImage(named: "...")
+let baseScheme = MaterialColorConverter.fromImage(image)
+```
+
+ ### 2. Convert scheme for SwiftUI (or UIKit)
+
+```swift
+let scheme: SwiftUIScheme = baseScheme.toSwiftUI()
+```
+
+
+

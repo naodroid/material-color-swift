@@ -20,7 +20,10 @@ struct ContentView: View {
     init() {
         let image = UIImage(named: "sample")!
         self.image = image
-        self.scheme = MaterialColorConverter.fromImage(image, isDarkTheme: false)!.toSwiftUI()
+        self.scheme = MaterialColorConverter.generateScheme(
+            from: image,
+            isDarkTheme: false
+        )!.toSwiftUI()
     }
     var body: some View {
         _ContentView(
@@ -32,15 +35,15 @@ struct ContentView: View {
             }
         )
             .onChange(of: isDarkMode, perform: { newValue in
-                scheme = MaterialColorConverter.fromImage(
-                    image,
+                scheme = MaterialColorConverter.generateScheme(
+                    from: image,
                     isDarkTheme: newValue
                 )!.toSwiftUI()
 
             })
             .sheet(isPresented: $isSheetShown) {
-                scheme = MaterialColorConverter.fromImage(
-                    self.image,
+                scheme = MaterialColorConverter.generateScheme(
+                    from: self.image,
                     isDarkTheme: self.isDarkMode
                 )!.toSwiftUI()
             } content: {

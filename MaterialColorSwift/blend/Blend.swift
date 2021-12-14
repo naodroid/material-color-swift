@@ -9,6 +9,7 @@ import Foundation
 
 /// Functions for blending in HCT and CAM16.
 public class Blend {
+    
     /// Shifts [designColor]'s hue towards [sourceColor]'s, creating a slightly
     /// warmer/coolor variant of [designColor]. Hue will shift up to 15 degrees.
     public static func harmonize(designColor: Int, sourceColor: Int) -> Int {

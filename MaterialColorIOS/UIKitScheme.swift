@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MaterialColorSwift
 
+/// Scheme converted for UIKit-Color
 public struct UIKitScheme {
     public let primary: UIColor
     public let onPrimary: UIColor
@@ -68,7 +69,10 @@ public struct UIKitScheme {
         self.inversePrimary = UIKitScheme.from(argb: scheme.inversePrimary)
     }
     
-    /// convert argb int value to SwiftUI.UIColor
+    /// convert argb int value to UIIColor
+    ///  - Parameters:
+    ///    - args: pixel color
+    ///  - Returns: converted UIColor
     public static func from(argb: Int) -> UIColor {
         let a = (argb >> 24) & 0xFF
         let r = (argb >> 16) & 0xFF

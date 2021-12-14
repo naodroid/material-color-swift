@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import MaterialColorSwift
 
+/// Scheme converted for SwiftUI-Color
 public struct SwiftUIScheme: Equatable {
     public let primary: Color
     public let onPrimary: Color
@@ -70,6 +71,9 @@ public struct SwiftUIScheme: Equatable {
     }
     
     /// convert argb int value to SwiftUI.Color
+    ///  - Parameters:
+    ///    - args: pixel color
+    ///  - Returns: converted SwiftUI Color
     public static func from(argb: Int) -> Color {
         let a = (argb >> 24) & 0xFF
         let r = (argb >> 16) & 0xFF

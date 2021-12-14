@@ -34,6 +34,7 @@
 		357BE38427654B77003F2C1F /* QuantizerWsmeansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BE38327654B77003F2C1F /* QuantizerWsmeansTests.swift */; };
 		357BE38627656192003F2C1F /* SchemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BE38527656192003F2C1F /* SchemeTests.swift */; };
 		357BE38827656243003F2C1F /* ScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BE38727656243003F2C1F /* ScoreTests.swift */; };
+		3591D7E4276964F5008B0D05 /* MaterialColorSwift.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3591D7E3276964F5008B0D05 /* MaterialColorSwift.docc */; };
 		35F6B9C027640C3F0090648F /* QuantizerWsmeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9BF27640C3F0090648F /* QuantizerWsmeans.swift */; };
 		35F6B9C327641B110090648F /* Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9C227641B110090648F /* Blend.swift */; };
 		35F6B9C827641B210090648F /* Cam16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6B9C527641B210090648F /* Cam16.swift */; };
@@ -135,6 +136,7 @@
 		357BE38327654B77003F2C1F /* QuantizerWsmeansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerWsmeansTests.swift; sourceTree = "<group>"; };
 		357BE38527656192003F2C1F /* SchemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeTests.swift; sourceTree = "<group>"; };
 		357BE38727656243003F2C1F /* ScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTests.swift; sourceTree = "<group>"; };
+		3591D7E3276964F5008B0D05 /* MaterialColorSwift.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MaterialColorSwift.docc; sourceTree = "<group>"; };
 		35F6B9BF27640C3F0090648F /* QuantizerWsmeans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizerWsmeans.swift; sourceTree = "<group>"; };
 		35F6B9C227641B110090648F /* Blend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blend.swift; sourceTree = "<group>"; };
 		35F6B9C527641B210090648F /* Cam16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cam16.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		3544B0C6276176370095C27B /* MaterialColorSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3591D7E3276964F5008B0D05 /* MaterialColorSwift.docc */,
 				35F6B9C127641B110090648F /* blend */,
 				35F6B9C427641B210090648F /* hct */,
 				35F6B9CB27641B350090648F /* palettes */,
@@ -546,6 +549,7 @@
 				35F6B9C327641B110090648F /* Blend.swift in Sources */,
 				3544B0FE27617CC80095C27B /* PointProviderLab.swift in Sources */,
 				35F6B9CF27641B350090648F /* CorePalette.swift in Sources */,
+				3591D7E4276964F5008B0D05 /* MaterialColorSwift.docc in Sources */,
 				3544B1062762C76B0095C27B /* QuantizerCelebi.swift in Sources */,
 				35F6B9D927641B420090648F /* StringUtils.swift in Sources */,
 				3544B10027617D980095C27B /* Quantizer.swift in Sources */,

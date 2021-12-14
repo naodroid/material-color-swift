@@ -22,10 +22,18 @@ private struct ColorCount: Comparable {
     }
 }
 
+
+/// Create Scheme from UIImage
+/// To use the scheme in SwiftUI, use `Scheme.toSwiftUI()` for converting.
 public class MaterialColorConverter {
     
-    public static func fromImage(_ uiImage: UIImage, isDarkTheme: Bool) -> Scheme? {
-        guard let pixels = imageToPixels(uiImage) else {
+    /// Create a scheme from UIImage.
+    ///  - Parameters:
+    ///    - uiImage : an image to be used in generation
+    ///    - isDarkTheme : true if use in dark theme,
+    ///   - Returns: generated scheme. if failure, returns nil
+    public static func generateScheme(from uiImage: UIImage, isDarkTheme: Bool) -> Scheme? {
+        guard let pixels = getPixels(from: uiImage) else {
             return nil
         }
         let size = CorePalette.size * TonalPalette.commonSize
@@ -46,9 +54,13 @@ public class MaterialColorConverter {
         return isDarkTheme ? Scheme.dark(color: color) : Scheme.light(color: color)
     }
     
-    
-    /// convert uiimage to argb pixel array in specified size (width, height=size)
-    public static func imageToPixels(_ uiImage: UIImage, size: Int = 16) -> [Int]? {
+    /// Convert UIImage to argb pixel array in specified size.  
+    /// The size of the returned-array is **size * size**
+    /// - Parameters:
+    ///   - image: an image to be used
+    ///   - size: size of pixel-array
+    ///  - Returns: Generated argb pixel array
+    public static func getPixels(from uiImage: UIImage, size: Int = 64) -> [Int]? {
         guard let cgImage = uiImage.cgImage else {
             return nil
         }
