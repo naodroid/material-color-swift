@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		351DE47C2767840A00B75AB3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351DE47B2767840A00B75AB3 /* ImagePicker.swift */; };
-		35279E162765E7DA00E141EF /* MaterialColorIOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = 35279E152765E7DA00E141EF /* MaterialColorIOS.docc */; };
 		35279E172765E7DA00E141EF /* MaterialColorIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 35279E142765E7DA00E141EF /* MaterialColorIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35279E1A2765E7DA00E141EF /* MaterialColorIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35279E122765E7DA00E141EF /* MaterialColorIOS.framework */; };
 		35279E1B2765E7DA00E141EF /* MaterialColorIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35279E122765E7DA00E141EF /* MaterialColorIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,6 +50,7 @@
 		35F6B9FC27641D9D0090648F /* MaterialColorSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3544B0C5276176370095C27B /* MaterialColorSwift.framework */; };
 		35F6BA03276420E80090648F /* HctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6BA02276420E80090648F /* HctTests.swift */; };
 		35F6BA05276424B60090648F /* PaletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6BA04276424B60090648F /* PaletteTests.swift */; };
+		35F6BA2827687A100090648F /* MaterialColorIOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = 35F6BA2727687A100090648F /* MaterialColorIOS.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +114,6 @@
 		351DE47B2767840A00B75AB3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		35279E122765E7DA00E141EF /* MaterialColorIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialColorIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35279E142765E7DA00E141EF /* MaterialColorIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaterialColorIOS.h; sourceTree = "<group>"; };
-		35279E152765E7DA00E141EF /* MaterialColorIOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MaterialColorIOS.docc; sourceTree = "<group>"; };
 		35279E252765E7F500E141EF /* MaterialColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialColorConverter.swift; sourceTree = "<group>"; };
 		35279E2B2765F7DC00E141EF /* SwiftUIScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIScheme.swift; sourceTree = "<group>"; };
 		35279E2D2765F97300E141EF /* UIKitScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitScheme.swift; sourceTree = "<group>"; };
@@ -152,6 +151,7 @@
 		35F6B9FA27641D9D0090648F /* BlendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendTests.swift; sourceTree = "<group>"; };
 		35F6BA02276420E80090648F /* HctTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HctTests.swift; sourceTree = "<group>"; };
 		35F6BA04276424B60090648F /* PaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteTests.swift; sourceTree = "<group>"; };
+		35F6BA2727687A100090648F /* MaterialColorIOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MaterialColorIOS.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +193,8 @@
 		35279E132765E7DA00E141EF /* MaterialColorIOS */ = {
 			isa = PBXGroup;
 			children = (
+				35F6BA2727687A100090648F /* MaterialColorIOS.docc */,
 				35279E142765E7DA00E141EF /* MaterialColorIOS.h */,
-				35279E152765E7DA00E141EF /* MaterialColorIOS.docc */,
 				35279E252765E7F500E141EF /* MaterialColorConverter.swift */,
 				35279E2B2765F7DC00E141EF /* SwiftUIScheme.swift */,
 				35279E2D2765F97300E141EF /* UIKitScheme.swift */,
@@ -206,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				3544B0D1276176440095C27B /* example */,
-				3544B0C6276176370095C27B /* MateriatColorSwift */,
+				3544B0C6276176370095C27B /* MaterialColorSwift */,
 				35F6B9F927641D9D0090648F /* MaterialColorSwiftTests */,
 				35279E132765E7DA00E141EF /* MaterialColorIOS */,
 				3544B0B0276176110095C27B /* Products */,
@@ -225,7 +225,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3544B0C6276176370095C27B /* MateriatColorSwift */ = {
+		3544B0C6276176370095C27B /* MaterialColorSwift */ = {
 			isa = PBXGroup;
 			children = (
 				35F6B9C127641B110090648F /* blend */,
@@ -237,7 +237,7 @@
 				35F6B9D027641B420090648F /* utils */,
 				3544B0C7276176370095C27B /* material_color_swift.h */,
 			);
-			path = MateriatColorSwift;
+			path = MaterialColorSwift;
 			sourceTree = "<group>";
 		};
 		3544B0D1276176440095C27B /* example */ = {
@@ -531,7 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35279E262765E7F500E141EF /* MaterialColorConverter.swift in Sources */,
-				35279E162765E7DA00E141EF /* MaterialColorIOS.docc in Sources */,
+				35F6BA2827687A100090648F /* MaterialColorIOS.docc in Sources */,
 				35279E2C2765F7DC00E141EF /* SwiftUIScheme.swift in Sources */,
 				35279E2E2765F97300E141EF /* UIKitScheme.swift in Sources */,
 			);
@@ -725,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -783,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -873,6 +873,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -904,6 +905,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
