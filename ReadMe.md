@@ -1,6 +1,8 @@
 Porting [MaterialColorUtilities](https://github.com/material-foundation/material-color-utilities) to swift.
 
-<img src='images/result.gif' width=200>
+Pick theme-colors from an image.
+
+<img src='images/result.gif'>
 
 <br>
 
@@ -10,7 +12,7 @@ add this git-url with SwiftPM.
 
 * MaterialColorSwift
   * only mathematics color calculation, no UIKit/SwiftUI dependencies.
-  * based on int array (32bit argb pixels)
+  * based on int-array (argb pixels)
 * MaterailColorIOS
   * a support library for iOS
   * generate material-colors from UIImage
