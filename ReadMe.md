@@ -1,6 +1,8 @@
 Porting [MaterialColorUtilities](https://github.com/material-foundation/material-color-utilities) to swift.
 
+<img src='images/result.gif' width=200>
 
+<br>
 
 ## How To Use
 
