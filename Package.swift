@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "MaterialColorSwift",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v13), .macOS(.v12), .watchOS(.v8)],
     products: [
         .library(
             name: "MaterialColorSwift",
