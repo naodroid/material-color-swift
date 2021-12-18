@@ -8,16 +8,19 @@
 import Foundation
 import UIKit
 import CoreGraphics
-import CoreImage
 import MaterialColorSwift
 
-private struct ColorCount: Comparable {
-    let color: Int
-    let count: Int
-    static func ==(lhs: ColorCount, rhs: ColorCount) -> Bool {
+/// struct for color and its count in the  image
+public struct ColorCount: Comparable {
+    /// argb
+    public let color: Int
+    /// how many used in the image
+    public let count: Int
+    //
+    public static func ==(lhs: ColorCount, rhs: ColorCount) -> Bool {
         return lhs.count == rhs.count
     }
-    static func <(lhs: ColorCount, rhs: ColorCount) -> Bool {
+    public static func <(lhs: ColorCount, rhs: ColorCount) -> Bool {
         return lhs.count < rhs.count
     }
 }
@@ -26,15 +29,12 @@ private struct ColorCount: Comparable {
 /// Create Scheme from UIImage
 /// To use the scheme in SwiftUI, use `Scheme.toSwiftUI()` for converting.
 public class MaterialColorConverter {
-    
-    /// Create a scheme from UIImage.
-    ///  - Parameters:
-    ///    - uiImage : an image to be used in generation
-    ///    - isDarkTheme : true if use in dark theme,
-    ///   - Returns: generated scheme. if failure, returns nil
-    public static func generateScheme(from uiImage: UIImage, isDarkTheme: Bool) -> Scheme? {
+    /// get color counts in the image, sorted by used-count (decending)
+    ///  - Parameter image: an image for color couling
+    ///  - Returns: The quaternized color count. if error happened, retums empty array
+    public static func getColorCounts(from uiImage: UIImage) -> [ColorCount] {
         guard let pixels = getPixels(from: uiImage) else {
-            return nil
+            return []
         }
         let size = CorePalette.size * TonalPalette.commonSize
         let colorToCount = QuantizerWsmeans.quantize(
@@ -44,16 +44,24 @@ public class MaterialColorConverter {
         let colors: [ColorCount] = colorToCount.map { (k, v) in
             ColorCount(color: k, count: v)
         }.sorted().reversed()
-        
-        //show histogram for debug
-//        for c in colors {
-//            print(String(format: "%02X, %d", c.color, c.count))
-//        }
+        return colors
+    }
+    
+    /// Create a scheme from UIImage.
+    ///  - Parameters:
+    ///    - uiImage : an image to be used in generation
+    ///    - isDarkTheme : true if use in dark theme,
+    ///   - Returns: generated scheme. if failure, returns nil
+    public static func generateScheme(from uiImage: UIImage, isDarkTheme: Bool) -> Scheme? {
+        let colors = getColorCounts(from: uiImage)
+        if colors.isEmpty {
+            return nil
+        }
         //pick top used color
         let color = colors[0].color
         return isDarkTheme ? Scheme.dark(color: color) : Scheme.light(color: color)
     }
-    
+        
     /// Convert UIImage to argb pixel array in specified size.  
     /// The size of the returned-array is **size * size**
     /// - Parameters:
