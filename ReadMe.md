@@ -2,7 +2,9 @@ Porting [MaterialColorUtilities](https://github.com/material-foundation/material
 
 Pick theme-colors from an image.
 
-<img src='images/result.gif'>
+
+https://user-images.githubusercontent.com/4728599/151645217-f206f694-b986-456a-b4be-5aa6f1d50efd.mp4
+
 
 <br>
 
