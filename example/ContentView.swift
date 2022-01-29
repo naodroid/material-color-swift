@@ -12,13 +12,13 @@ import Combine
 
 struct ContentView: View {
     
-    @State var image: UIImage
-    @State var scheme: SwiftUIScheme
-    @State var isSheetShown: Bool = false
-    @State var isDarkMode: Bool = false
+    @State private var image: UIImage
+    @State private var scheme: SwiftUIScheme
+    @State private var isDarkMode: Bool = false
+    @State private var imageIndex = 0
     
     init() {
-        let image = UIImage(named: "sample")!
+        let image = UIImage(named: "sample00")!
         self.image = image
         self.scheme = MaterialColorConverter.generateScheme(
             from: image,
@@ -31,7 +31,7 @@ struct ContentView: View {
             scheme: self.scheme,
             isDarkMode: $isDarkMode,
             onImageChangeClicked: {
-                isSheetShown = true
+                nextImage()
             }
         )
             .onChange(of: isDarkMode, perform: { newValue in
@@ -41,19 +41,14 @@ struct ContentView: View {
                 )!.toSwiftUI()
 
             })
-            .sheet(isPresented: $isSheetShown) {
-                scheme = MaterialColorConverter.generateScheme(
-                    from: self.image,
-                    isDarkTheme: self.isDarkMode
-                )!.toSwiftUI()
-            } content: {
-                ImagePicker { img in
-                    if let i = img {
-                        image = i
-                        
-                    }
-                }
-            }
+    }
+    private func nextImage() {
+        imageIndex = (imageIndex + 1) % 3
+        image = UIImage(named: "sample0\(imageIndex)")!
+        scheme = MaterialColorConverter.generateScheme(
+            from: image,
+            isDarkTheme: isDarkMode
+        )!.toSwiftUI()
     }
 }
 ///
